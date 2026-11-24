@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuestro Origen | Alma &amp; Origen - Cafe Norte del Cauca</title>
+  <meta name="description" content="Conoce la historia, el territorio y los valores que hacen unico al cafe de origen Norte del Cauca de Alma y Origen.">
+  <meta name="author" content="Alma &amp; Origen">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+
+  <header class="navbar" id="mainNavbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="brand-logo" aria-label="Alma y Origen Inicio">
+        <img src="assets/images/logo-original.png" alt="Alma y Origen Logotipo" class="brand-emblem-img">
+        <div class="brand-text-wrap">
+          <span class="brand-name">Alma &amp; Origen</span>
+          <span class="brand-tagline">Cafe de Origen - Norte del Cauca</span>
+        </div>
+      </a>
+      <nav aria-label="Navegacion Principal">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Inicio</a></li>
+          <li><a href="origen.html" class="nav-link active">Nuestro Origen</a></li>
+          <li><a href="portafolio.html" class="nav-link">Productos</a></li>
+          <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <div id="authNavBtn" style="display:flex; align-items:center;">
+          <a href="login.html" class="btn-auth-nav">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+            </svg>
+            Ingresar
+          </a>
+        </div>
+        <button class="cart-trigger-btn" id="cartTriggerBtn" aria-label="Ver Carrito de Compras">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
+          </svg>
+          <span class="cart-trigger-text">Carrito</span>
+          <span class="cart-badge-count">0</span>
+        </button>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO CON IMAGEN PANORAMICA DE FONDO -->
+  <section style="position: relative; min-height: 520px; display: flex; align-items: center; overflow: hidden;">
+    <img src="assets/images/origen-paisaje.jpg" alt="Paisaje cafetalero Norte del Cauca"
+         style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center;">
+    <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(20,10,5,0.82) 0%, rgba(60,30,10,0.6) 100%);"></div>
+    <div class="container" style="position: relative; z-index: 2; text-align: center; padding: 120px 20px 80px;">
+      <span class="section-tag" style="background: rgba(197,160,89,0.25); color: var(--color-gold-light); border-color: var(--color-gold);">Identidad Territorial</span>
+      <h1 style="font-family: var(--font-serif); font-size: clamp(2.2rem, 5.5vw, 4rem); color: #fff; margin: 18px 0 22px; text-shadow: 0 2px 24px rgba(0,0,0,0.5);">
+        Cafe con Raices,<br>Dignidad y Trazabilidad
+      </h1>
+      <p style="max-width: 620px; margin: 0 auto 40px; color: rgba(255,255,255,0.82); font-size: 1.1rem; line-height: 1.85;">
+        El Norte del Cauca es reconocido internacionalmente por sus cafes de notas dulces, acidez citrica brillante y cuerpo equilibrado, cultivados en suelos volcanicos nutridos por las vertientes de la cordillera.
+      </p>
+      <div style="display: flex; justify-content: center; gap: 32px; flex-wrap: wrap;">
+        <div style="text-align: center;">
+          <div style="font-family: var(--font-serif); font-size: 2rem; color: var(--color-gold); font-weight: 700;">1.750 m</div>
+          <div style="font-size: 0.82rem; color: rgba(255,255,255,0.65); text-transform: uppercase; letter-spacing: 1px;">Altitud de cultivo</div>
+        </div>
+        <div style="width: 1px; background: rgba(197,160,89,0.4);"></div>
+        <div style="text-align: center;">
+          <div style="font-family: var(--font-serif); font-size: 2rem; color: var(--color-gold); font-weight: 700;">85+</div>
+          <div style="font-size: 0.82rem; color: rgba(255,255,255,0.65); text-transform: uppercase; letter-spacing: 1px;">Puntos en taza</div>
+        </div>
+        <div style="width: 1px; background: rgba(197,160,89,0.4);"></div>
+        <div style="text-align: center;">
+          <div style="font-family: var(--font-serif); font-size: 2rem; color: var(--color-gold); font-weight: 700;">100%</div>
+          <div style="font-size: 0.82rem; color: rgba(255,255,255,0.65); text-transform: uppercase; letter-spacing: 1px;">Origen trazable</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCION AUDIOVISUAL: DEL CAUCA AL DRIP BAG -->
+  <section class="reel-section" id="proceso-audiovisual">
+    <div class="container">
+      <div style="text-align: center; max-width: 760px; margin: 0 auto;">
+        <span class="section-tag" style="background: rgba(197, 160, 89, 0.15); color: var(--color-gold); border: 1px solid rgba(197, 160, 89, 0.3);">Ruta Audiovisual del Café</span>
+        <h2 class="section-title" style="color: #fff; margin-top: 10px; margin-bottom: 14px;">Desde las Alturas del Cauca hasta tu Drip Bag</h2>
+        <p style="color: rgba(255, 255, 255, 0.75); font-size: 1rem; line-height: 1.6;">
+          Descubre en 4 momentos el recorrido de <strong>Alma &amp; Origen</strong>: niebla andina, recolección manual de cerezas, tueste de precisión y extracción en filtro portátil.
+        </p>
+      </div>
+
+      <!-- REPRODUCTOR DE VIDEO REEL CONTINUO -->
+      <div class="reel-showcase-container">
+        
+        <!-- Teléfono Reel Interactivo -->
+        <div class="reel-phone-frame" id="coffeeReelPlayer">
+          
+          <!-- Degradados -->
+          <div class="reel-gradient-top"></div>
+          <div class="reel-gradient-bottom"></div>
+
+          <!-- Barras de progreso segmentadas (4 capítulos) -->
+          <div class="reel-progress-segments">
+            <div class="reel-segment-bar" data-index="0"><div class="reel-segment-fill"></div></div>
+            <div class="reel-segment-bar" data-index="1"><div class="reel-segment-fill"></div></div>
+            <div class="reel-segment-bar" data-index="2"><div class="reel-segment-fill"></div></div>
+            <div class="reel-segment-bar" data-index="3"><div class="reel-segment-fill"></div></div>
+          </div>
+
+          <!-- Barra superior del Reel -->
+          <div class="reel-header-bar">
+            <div class="reel-author-badge">
+              <div class="reel-author-avatar">☕</div>
+              <span class="reel-author-name">Alma &amp; Origen</span>
+            </div>
+            <span class="reel-badge-tag">Reel 4K</span>
+          </div>
+
+          <!-- Diapositivas continuas del video -->
+          <div class="reel-slides-wrapper">
+            <!-- Escena 1 -->
+            <div class="reel-slide active" data-index="0">
+              <img src="assets/images/proceso-montanas-cauca.jpg" alt="Montañas del Cauca a 1.750 msnm">
+            </div>
+            <!-- Escena 2 -->
+            <div class="reel-slide" data-index="1">
+              <img src="assets/images/proceso-cosecha-cerezas.jpg" alt="Cosecha manual de cerezas de café">
+            </div>
+            <!-- Escena 3 -->
+            <div class="reel-slide" data-index="2">
+              <img src="assets/images/proceso-tueste-maestro.jpg" alt="Tueste artesanal de especialidad">
+            </div>
+            <!-- Escena 4 -->
+            <div class="reel-slide" data-index="3">
+              <img src="assets/images/proceso-drip-preparacion.jpg" alt="Preparación en filtro Drip Bag Alma y Origen">
+            </div>
+          </div>
+
+          <!-- Zonas de toque táctil (anterior, pausar, siguiente) -->
+          <div class="reel-tap-zone-left" id="reelTapPrev" title="Escena anterior"></div>
+          <div class="reel-tap-zone-center" id="reelTapToggle" title="Pausar / Reproducir"></div>
+          <div class="reel-tap-zone-right" id="reelTapNext" title="Siguiente escena"></div>
+
+          <!-- Indicador central de pausa -->
+          <div class="reel-center-play" id="reelPlayIndicator">
+            <svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z"/>
+            </svg>
+          </div>
+
+          <!-- Botones de acción flotantes (derecha) -->
+          <div class="reel-actions-column">
+            <!-- Like -->
+            <div>
+              <button class="reel-action-btn" id="reelLikeBtn" aria-label="Me gusta">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                </svg>
+              </button>
+              <div class="reel-action-label" id="reelLikeCount">842</div>
+            </div>
+
+            <!-- Sonido / Audio Toggle -->
+            <div>
+              <button class="reel-action-btn" id="reelSoundBtn" aria-label="Sonido ambiente">
+                <svg id="reelSoundIcon" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+                </svg>
+              </button>
+              <div class="reel-action-label">Audio</div>
+            </div>
+
+            <!-- WhatsApp Directo -->
+            <div>
+              <a href="https://wa.me/573155551234?text=Hola%20Alma%20y%20Origen,%20vi%20el%20video%20del%20proceso%20del%20cafe%20y%20quiero%20hacer%20un%20pedido%20de%20Drip%20Bags."
+                 class="reel-action-btn" target="_blank" rel="noopener" aria-label="Pedir por WhatsApp">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.699c.969.54 1.771.82 2.791.82 3.182 0 5.768-2.587 5.768-5.766.001-3.181-2.584-5.766-5.768-5.766zm9.969 5.766c0 5.503-4.477 9.98-9.97 9.98-1.748 0-3.383-.454-4.81-1.248l-5.22 1.366 1.39-5.084c-.886-1.503-1.39-3.255-1.39-5.014 0-5.503 4.477-9.98 9.97-9.98 5.493 0 9.97 4.477 9.97 9.98z"/>
+                </svg>
+              </a>
+              <div class="reel-action-label">Pedir</div>
+            </div>
+          </div>
+
+          <!-- Caja de Subtítulos y Detalles del Capítulo -->
+          <div class="reel-caption-box">
+            <span class="reel-chapter-label" id="reelChapterLabel">Capítulo 01 • 1.750 msnm</span>
+            <h4 class="reel-caption-title" id="reelCaptionTitle">Las Montañas del Cauca</h4>
+            <p class="reel-caption-text" id="reelCaptionText">
+              El viaje comienza en las cumbres andinas del Cauca. Suelos volcánicos y nieblas frías crean el microclima perfecto.
+            </p>
+            <div class="reel-audio-track">
+              <div class="reel-music-bars">
+                <span class="reel-music-bar"></span>
+                <span class="reel-music-bar"></span>
+                <span class="reel-music-bar"></span>
+              </div>
+              <span>Alma &amp; Origen • Sonido de Altura</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel Lateral Descriptivo y Selector de Capítulos (Desktop) -->
+        <div class="reel-side-panel">
+          <div class="reel-side-header">
+            <span class="section-tag" style="background: rgba(197, 160, 89, 0.15); color: var(--color-gold); border: 1px solid rgba(197, 160, 89, 0.3);">Video Reel Completo</span>
+            <h3>La Travesía del Café en un Solo Clip</h3>
+            <p>
+              Visualiza en tiempo real todo el recorrido de nuestro café: desde la bruma de los Andes caucanos hasta la extracción instantánea de tu Drip Bag. Haz clic en cualquier capítulo para saltar a ese instante.
+            </p>
+          </div>
+
+          <!-- Lista de capítulos interactiva -->
+          <div class="reel-chapters-list">
+            <div class="reel-chapter-item active" data-index="0">
+              <div class="reel-chapter-num">01</div>
+              <div class="reel-chapter-details">
+                <h4>Las Montañas del Cauca</h4>
+                <p>1.750 msnm • Suelos volcánicos y cordilleras andinas</p>
+              </div>
+            </div>
+
+            <div class="reel-chapter-item" data-index="1">
+              <div class="reel-chapter-num">02</div>
+              <div class="reel-chapter-details">
+                <h4>Cosecha Selectiva en Rama</h4>
+                <p>Recolección manual de frutos en óptimo punto dulce</p>
+              </div>
+            </div>
+
+            <div class="reel-chapter-item" data-index="2">
+              <div class="reel-chapter-num">03</div>
+              <div class="reel-chapter-details">
+                <h4>Tueste Artesanal de Autor</h4>
+                <p>Curvas calibradas para notas a panela y frutos amarillos</p>
+              </div>
+            </div>
+
+            <div class="reel-chapter-item" data-index="3">
+              <div class="reel-chapter-num">04</div>
+              <div class="reel-chapter-details">
+                <h4>Preparación Drip Bag Alma &amp; Origen</h4>
+                <p>Extracción artesanal con agua caliente sin cafetera</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Controles de reproducción adicionales -->
+          <div class="reel-playback-controls">
+            <button class="btn btn-primary" id="reelMainPlayBtn" style="display: inline-flex; align-items: center; gap: 8px;">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z"/>
+              </svg>
+              <span id="reelPlayBtnText">Pausar Video</span>
+            </button>
+            <a href="portafolio.html" class="btn btn-secondary">
+              Probar los Drip Bags &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-origin" id="origen" style="padding-top: 80px;">
+    <div class="container origin-grid">
+      <div class="origin-media">
+        <img src="assets/images/origen-cauca.jpg" alt="Montanas cafetaleras del Norte del Cauca" class="origin-main-img">
+        <div class="origin-badge-card">
+          <img src="assets/images/logo-original.png" alt="Sello Alma y Origen" class="logo-stamp">
+          <h4>Norte del Cauca</h4>
+          <p>Territorio volcanico, microclimas andinos y tradicion cafetera viva.</p>
+        </div>
+      </div>
+      <div class="origin-content">
+        <span class="section-tag">Pilares de Calidad</span>
+        <h2 class="section-title">Lo que hace unico a nuestro cafe</h2>
+        <div class="origin-pillars">
+          <div class="pillar-card">
+            <div class="pillar-icon">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+              </svg>
+            </div>
+            <h4>Cosecha Selectiva</h4>
+            <p>Recoleccion manual de cerezas en su punto optimo de maduracion por caficultores de la region.</p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-icon">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+              </svg>
+            </div>
+            <h4>Procesos Especiales</h4>
+            <p>Beneficio lavado tradicional y fermentaciones naturales con cereza entera de alto valor sensorial.</p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-icon">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+              </svg>
+            </div>
+            <h4>Tueste Fresco y Preciso</h4>
+            <p>Curvas de tostion calibradas para resaltar la dulzura natural a panela y frutos rojos.</p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-icon">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"/>
+              </svg>
+            </div>
+            <h4>Impacto Regional</h4>
+            <p>Comercio justo que fortalece el tejido socioeconomico de las familias caficultoras caucanas.</p>
+          </div>
+        </div>
+        <div style="margin-top: 36px; display: flex; gap: 16px; flex-wrap: wrap;">
+          <a href="portafolio.html" class="btn btn-primary">Ver Productos</a>
+          <a href="contacto.html" class="btn btn-secondary">Contactanos</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GALERIA DE VIDEOS: NUESTRO ORIGEN ===== -->
+  <section id="galeria-videos" style="padding: 90px 0; background: #140A07;">
+    <div class="container">
+      <div style="text-align: center; max-width: 780px; margin: 0 auto 60px;">
+        <span class="section-tag" style="background: rgba(197,160,89,0.2); color: #C5A059; border: 1px solid rgba(197,160,89,0.4);">Galeria Audiovisual</span>
+        <h2 style="font-family: var(--font-serif); font-size: clamp(1.8rem, 4vw, 2.8rem); color: #F5ECD7; margin-top: 14px; margin-bottom: 16px; font-weight: 700;">El Viaje del Cafe en Video</h2>
+        <p style="color: #BBA98A; font-size: 1rem; line-height: 1.75;">
+          Desde las cumbres andinas del Norte del Cauca hasta tu taza. Aqui te mostramos, en imagenes reales, cada etapa del proceso que convierte nuestra cereza en un cafe de especialidad con identidad territorial.
+        </p>
+      </div>
+
+      <!-- VIDEO PRINCIPAL: Alma & Origen -->
+      <div style="margin-bottom: 60px; border-radius: 20px; overflow: hidden; border: 1px solid rgba(197,160,89,0.25); box-shadow: 0 20px 60px rgba(0,0,0,0.6);">
+        <div style="position: relative; width: 100%; aspect-ratio: 16/9; background: #0D0806;">
+          <video
+            controls
+            preload="metadata"
+            style="width: 100%; height: 100%; object-fit: cover; display: block;"
+            poster="assets/images/origen-paisaje.jpg">
+            <source src="videos/alma%20%26%20origen.mp4" type="video/mp4">
+            Tu navegador no soporta reproduccion de video.
+          </video>
+        </div>
+        <div style="padding: 28px 32px; background: #1A110D; border-top: 1px solid rgba(197,160,89,0.2);">
+          <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+            <span style="background: var(--color-gold); color: #18110D; font-size: 0.7rem; font-weight: 800; padding: 3px 12px; border-radius: 20px; text-transform: uppercase; letter-spacing: 1px;">Video Principal</span>
+          </div>
+          <h3 style="font-family: var(--font-serif); color: #fff; font-size: 1.45rem; margin: 0 0 10px;">Alma &amp; Origen — Historia de un Cafe con Raices</h3>
+          <p style="color: rgba(255,255,255,0.7); font-size: 0.96rem; line-height: 1.7; margin: 0; max-width: 860px;">
+            El video emblema de la marca. Un recorrido cinematografico por las montanas del Norte del Cauca que muestra el alma de nuestro cafe: los cultivadores, el territorio volcanico, la cosecha manual de cerezas y la propuesta de valor de <strong style="color: var(--color-gold);">Alma &amp; Origen</strong> para hoteles, hogares e instituciones. Una historia de dignidad, trazabilidad y sabor a 1.750 metros sobre el nivel del mar.
+          </p>
+        </div>
+      </div>
+
+      <!-- GRID DE VIDEOS CORTOS (WhatsApp) -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 28px;">
+
+        <!-- Video 1 -->
+        <div style="border-radius: 16px; overflow: hidden; border: 1px solid rgba(197,160,89,0.2); background: #1A110D; box-shadow: 0 10px 35px rgba(0,0,0,0.5);">
+          <div style="position: relative; width: 100%; aspect-ratio: 9/16; background: #0D0806; max-height: 420px;">
+            <video
+              controls
+              preload="metadata"
+              poster="assets/images/proceso-montanas-cauca.jpg"
+              style="width: 100%; height: 100%; object-fit: cover; display: block; max-height: 420px;">
+              <source src="videos/WhatsApp%20Video%202026-10-21%20at%2010.52.44%20PM.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div style="padding: 20px 22px;">
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+              <span style="background: rgba(197,160,89,0.15); color: var(--color-gold); font-size: 0.68rem; font-weight: 700; padding: 3px 10px; border-radius: 12px; text-transform: uppercase; letter-spacing: 1px; border: 1px solid rgba(197,160,89,0.3);">Noche en Finca</span>
+            </div>
+            <h4 style="font-family: var(--font-serif); color: #fff; font-size: 1.05rem; margin: 0 0 8px;">El Cafe Bajo las Estrellas del Cauca</h4>
+            <p style="color: rgba(255,255,255,0.65); font-size: 0.86rem; line-height: 1.65; margin: 0;">
+              Una toma nocturna desde la finca productora. La niebla baja sobre los cafetales al caer la noche, recordandonos que el cafe de especialidad nace en un microclima unico: temperatura fresca, humedad andina y altitud que ralentiza la maduracion de la cereza para concentrar sus azucares naturales.
+            </p>
+          </div>
+        </div>
+
+        <!-- Video 2 -->
+        <div style="border-radius: 16px; overflow: hidden; border: 1px solid rgba(197,160,89,0.2); background: #1A110D; box-shadow: 0 10px 35px rgba(0,0,0,0.5);">
+          <div style="position: relative; width: 100%; aspect-ratio: 9/16; background: #0D0806; max-height: 420px;">
+            <video
+              controls
+              preload="metadata"
+              poster="assets/images/origen-cerezas.jpg"
+              style="width: 100%; height: 100%; object-fit: cover; display: block; max-height: 420px;">
+              <source src="videos/WhatsApp%20Video%202026-10-22%20at%2012.14.49%20AM.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div style="padding: 20px 22px;">
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+              <span style="background: rgba(197,160,89,0.15); color: var(--color-gold); font-size: 0.68rem; font-weight: 700; padding: 3px 10px; border-radius: 12px; text-transform: uppercase; letter-spacing: 1px; border: 1px solid rgba(197,160,89,0.3);">Cosecha</span>
+            </div>
+            <h4 style="font-family: var(--font-serif); color: #fff; font-size: 1.05rem; margin: 0 0 8px;">Recoleccion Manual en la Madrugada</h4>
+            <p style="color: rgba(255,255,255,0.65); font-size: 0.86rem; line-height: 1.65; margin: 0;">
+              Los caficultores del Norte del Cauca inician la jornada antes del amanecer. Este clip captura la esencia de la cosecha selectiva: manos expertas eligiendo solo las cerezas en su punto optimo de maduracion roja, garantizando la dulzura y el perfil sensorial que distingue a nuestro cafe.
+            </p>
+          </div>
+        </div>
+
+        <!-- Video 3 -->
+        <div style="border-radius: 16px; overflow: hidden; border: 1px solid rgba(197,160,89,0.2); background: #1A110D; box-shadow: 0 10px 35px rgba(0,0,0,0.5);">
+          <div style="position: relative; width: 100%; aspect-ratio: 9/16; background: #0D0806; max-height: 420px;">
+            <video
+              controls
+              preload="metadata"
+              poster="assets/images/proceso-cosecha-cerezas.jpg"
+              style="width: 100%; height: 100%; object-fit: cover; display: block; max-height: 420px;">
+              <source src="videos/WhatsApp%20Video%202026-10-22%20at%201.43.04%20PM.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div style="padding: 20px 22px;">
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+              <span style="background: rgba(197,160,89,0.15); color: var(--color-gold); font-size: 0.68rem; font-weight: 700; padding: 3px 10px; border-radius: 12px; text-transform: uppercase; letter-spacing: 1px; border: 1px solid rgba(197,160,89,0.3);">Proceso</span>
+            </div>
+            <h4 style="font-family: var(--font-serif); color: #fff; font-size: 1.05rem; margin: 0 0 8px;">Beneficio y Lavado de Cerezas</h4>
+            <p style="color: rgba(255,255,255,0.65); font-size: 0.86rem; line-height: 1.65; margin: 0;">
+              Despues de la recoleccion, las cerezas pasan por el proceso de beneficio humedo: despulpado, fermentacion controlada y lavado cuidadoso con agua de vertiente. Esta etapa es clave para limpiar el grano y preservar las notas de acidez citrica brillante y cuerpo equilibrado del cafe caucano.
+            </p>
+          </div>
+        </div>
+
+        <!-- Video 4 -->
+        <div style="border-radius: 16px; overflow: hidden; border: 1px solid rgba(197,160,89,0.2); background: #1A110D; box-shadow: 0 10px 35px rgba(0,0,0,0.5);">
+          <div style="position: relative; width: 100%; aspect-ratio: 9/16; background: #0D0806; max-height: 420px;">
+            <video
+              controls
+              preload="metadata"
+              poster="assets/images/proceso-tueste-maestro.jpg"
+              style="width: 100%; height: 100%; object-fit: cover; display: block; max-height: 420px;">
+              <source src="videos/WhatsApp%20Video%202026-10-24%20at%205.04.14%20PM.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div style="padding: 20px 22px;">
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+              <span style="background: rgba(197,160,89,0.15); color: var(--color-gold); font-size: 0.68rem; font-weight: 700; padding: 3px 10px; border-radius: 12px; text-transform: uppercase; letter-spacing: 1px; border: 1px solid rgba(197,160,89,0.3);">Tueste</span>
+            </div>
+            <h4 style="font-family: var(--font-serif); color: #fff; font-size: 1.05rem; margin: 0 0 8px;">Tueste Artesanal de Autor</h4>
+            <p style="color: rgba(255,255,255,0.65); font-size: 0.86rem; line-height: 1.65; margin: 0;">
+              El momento en que el grano verde del Cauca se transforma. Curvas de tueste calibradas con precision artesanal para resaltar las notas naturales a panela, frutos amarillos y caramelo que hacen unico al cafe de 1.750 msnm. Cada lote es tostado fresco para garantizar maximo aroma en taza.
+            </p>
+          </div>
+        </div>
+
+        <!-- Video 5 -->
+        <div style="border-radius: 16px; overflow: hidden; border: 1px solid rgba(197,160,89,0.2); background: #1A110D; box-shadow: 0 10px 35px rgba(0,0,0,0.5);">
+          <div style="position: relative; width: 100%; aspect-ratio: 9/16; background: #0D0806; max-height: 420px;">
+            <video
+              controls
+              preload="metadata"
+              poster="assets/images/drip-10g.jpg"
+              style="width: 100%; height: 100%; object-fit: cover; display: block; max-height: 420px;">
+              <source src="videos/WhatsApp%20Video%202026-10-24%20at%205.35.20%20PM.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div style="padding: 20px 22px;">
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+              <span style="background: rgba(197,160,89,0.15); color: var(--color-gold); font-size: 0.68rem; font-weight: 700; padding: 3px 10px; border-radius: 12px; text-transform: uppercase; letter-spacing: 1px; border: 1px solid rgba(197,160,89,0.3);">Empaque</span>
+            </div>
+            <h4 style="font-family: var(--font-serif); color: #fff; font-size: 1.05rem; margin: 0 0 8px;">Empaque y Sellado del Drip Bag</h4>
+            <p style="color: rgba(255,255,255,0.65); font-size: 0.86rem; line-height: 1.65; margin: 0;">
+              El proceso de envasado del Filtro Drip Portatil 10g de Alma &amp; Origen. Cada unidad se llena con cafe recien tostado y se sella con nitrógeno para preservar la frescura. Un formato pensado para hoteles, amenities de habitacion y viajeros que no quieren sacrificar calidad en ningun lugar.
+            </p>
+          </div>
+        </div>
+
+        <!-- Video 6 -->
+        <div style="border-radius: 16px; overflow: hidden; border: 1px solid rgba(197,160,89,0.2); background: #1A110D; box-shadow: 0 10px 35px rgba(0,0,0,0.5);">
+          <div style="position: relative; width: 100%; aspect-ratio: 9/16; background: #0D0806; max-height: 420px;">
+            <video
+              controls
+              preload="metadata"
+              poster="assets/images/proceso-drip-preparacion.jpg"
+              style="width: 100%; height: 100%; object-fit: cover; display: block; max-height: 420px;">
+              <source src="videos/WhatsApp%20Video%202026-10-25%20at%2012.30.19%20PM.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div style="padding: 20px 22px;">
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+              <span style="background: rgba(197,160,89,0.15); color: var(--color-gold); font-size: 0.68rem; font-weight: 700; padding: 3px 10px; border-radius: 12px; text-transform: uppercase; letter-spacing: 1px; border: 1px solid rgba(197,160,89,0.3);">Preparacion</span>
+            </div>
+            <h4 style="font-family: var(--font-serif); color: #fff; font-size: 1.05rem; margin: 0 0 8px;">Extraccion en Filtro Drip — Del Cauca a tu Taza</h4>
+            <p style="color: rgba(255,255,255,0.65); font-size: 0.86rem; line-height: 1.65; margin: 0;">
+              El ritual final: abrir el filtro Drip Bag Alma &amp; Origen, colgarlo sobre tu taza y verter agua a 92°C en movimientos circulares. En 3 minutos tienes un cafe de especialidad del Norte del Cauca sin necesidad de cafetera. Ideal para habitaciones de hotel, oficinas e instituciones educativas que valoran la calidad en taza.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CTA al final de la galeria -->
+      <div style="text-align: center; margin-top: 56px;">
+        <p style="color: #BBA98A; font-size: 0.95rem; margin-bottom: 24px;">¿Te enamoraste del proceso? Lleva este cafe a tu hotel, hogar o institucion.</p>
+        <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+          <a href="portafolio.html" class="btn btn-primary">Ver Productos</a>
+          <a href="contacto.html" class="btn btn-secondary">Contactanos &rarr;</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- ===== FIN GALERIA DE VIDEOS ===== -->
+
+  <section style="padding: 80px 0; background: var(--color-bg-secondary);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Datos del Territorio</span>
+        <h2 class="section-title">Norte del Cauca en Cifras</h2>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; margin-top: 48px;">
+        <div class="pillar-card" style="text-align:center;">
+          <h3 class="gold-gradient-text" style="font-size: 2.5rem; font-family: var(--font-serif);">1.750 m</h3>
+          <p style="color: var(--color-text-muted);">Altura promedio de cultivo</p>
+        </div>
+        <div class="pillar-card" style="text-align:center;">
+          <h3 class="gold-gradient-text" style="font-size: 2.5rem; font-family: var(--font-serif);">85+</h3>
+          <p style="color: var(--color-text-muted);">Puntos en taza Q-Grader</p>
+        </div>
+        <div class="pillar-card" style="text-align:center;">
+          <h3 class="gold-gradient-text" style="font-size: 2.5rem; font-family: var(--font-serif);">100%</h3>
+          <p style="color: var(--color-text-muted);">Cafe de origen trazable</p>
+        </div>
+        <div class="pillar-card" style="text-align:center;">
+          <h3 class="gold-gradient-text" style="font-size: 2.5rem; font-family: var(--font-serif);">2 zonas</h3>
+          <p style="color: var(--color-text-muted);">Cordillera Central y Occidental</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 14px;">
+            <img src="assets/images/logo-original.png" alt="Logo Alma y Origen" style="width: 64px; height: 64px; object-fit: contain; filter: drop-shadow(0 3px 8px rgba(197, 160, 89, 0.4));">
+            <h3 class="brand-name" style="font-size: 1.45rem;">Alma &amp; Origen</h3>
+          </div>
+          <p>Cafe especial de altura del Norte del Cauca. Compromiso con la excelencia en taza y el bienestar de los productores caucanos.</p>
+        </div>
+        <div class="footer-column">
+          <h4>Productos</h4>
+          <ul class="footer-links">
+            <li><a href="portafolio.html">Filtro Drip 10g</a></li>
+            <li><a href="portafolio.html">Cafe por Kilo (1kg)</a></li>
+            <li><a href="portafolio.html">Libra Natural (454g)</a></li>
+            <li><a href="portafolio.html">Bolsa 125g Viajera</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Navegacion</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="origen.html">Nuestro Origen</a></li>
+            <li><a href="portafolio.html">Productos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Region y Territorio</h4>
+          <p style="font-size: 0.88rem; color: #AAA098; line-height: 1.6; margin-bottom: 12px;">
+            Cafes de altura del Norte del Cauca, Colombia.
+          </p>
+          <span style="display: inline-block; font-size: 0.75rem; color: var(--color-gold); border: 1px solid var(--color-gold); padding: 4px 10px; border-radius: 4px;">
+            Soporte Logistico Cali &amp; Cauca
+          </span>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Alma &amp; Origen. Todos los derechos reservados.</p>
+        <p>Publicado en Firebase Hosting</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL VISOR AUDIOVISUAL CINEMATICO -->
+  <div class="modal-overlay" id="reelModal" role="dialog" aria-modal="true" style="display: none; align-items: center; justify-content: center; z-index: 9999;">
+    <div class="modal-card" style="max-width: 900px; width: 92%; padding: 0; overflow: hidden; border-radius: 16px; background: #16100E; border: 1px solid var(--color-gold); box-shadow: 0 25px 60px rgba(0,0,0,0.85); position: relative;">
+      <button class="modal-close-btn" id="reelModalClose" aria-label="Cerrar visor" style="z-index: 10; background: rgba(0,0,0,0.65); top: 14px; right: 14px;">&times;</button>
+      <div style="position: relative; width: 100%; aspect-ratio: 16 / 9; background: #000; overflow: hidden;">
+        <img id="reelModalImg" src="" alt="Escena cinematográfica del café" style="width: 100%; height: 100%; object-fit: cover; transition: transform 2.5s cubic-bezier(0.2, 0.8, 0.2, 1);">
+        <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(15,9,7,0.96) 0%, rgba(15,9,7,0.7) 60%, transparent 100%); padding: 32px 28px 22px;">
+          <span id="reelModalBadge" style="background: var(--color-gold); color: #18110D; font-size: 0.72rem; font-weight: 800; padding: 4px 12px; border-radius: 20px; text-transform: uppercase; letter-spacing: 1px; display: inline-block;">Capítulo 01</span>
+          <h3 id="reelModalTitle" class="title-serif" style="color: #fff; font-size: 1.55rem; margin: 10px 0 6px;">Título</h3>
+          <p id="reelModalDesc" style="color: rgba(255,255,255,0.88); font-size: 0.92rem; line-height: 1.55; margin: 0; max-width: 720px;"></p>
+        </div>
+      </div>
+      <div style="padding: 16px 26px; background: #1C1411; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(197,160,89,0.25);">
+        <button id="reelPrevBtn" class="btn btn-secondary" style="padding: 8px 16px; font-size: 0.82rem; border-color: rgba(197,160,89,0.4);">&larr; Escena Anterior</button>
+        <span id="reelStepIndicator" style="color: var(--color-gold); font-size: 0.88rem; font-weight: 700; font-family: var(--font-serif); letter-spacing: 2px;">1 / 4</span>
+        <button id="reelNextBtn" class="btn btn-primary" style="padding: 8px 16px; font-size: 0.82rem;">Siguiente Escena &rarr;</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- BOTONES FLOTANTES DE CONTACTO Y REDES SOCIALES -->
+  <div class="floating-social-stack" aria-label="Canales de contacto y redes sociales">
+    <!-- Instagram -->
+    <a href="https://instagram.com" class="floating-btn floating-instagram" target="_blank" rel="noopener noreferrer" aria-label="Siguenos en Instagram">
+      <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+      </svg>
+    </a>
+
+    <!-- Facebook -->
+    <a href="https://facebook.com" class="floating-btn floating-facebook" target="_blank" rel="noopener noreferrer" aria-label="Siguenos en Facebook">
+      <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+      </svg>
+    </a>
+
+    <!-- WhatsApp -->
+    <a href="https://wa.me/573155551234?text=Hola%20Alma%20y%20Origen,%20me%20gustaria%20recibir%20informacion%20sobre%20su%20cafe%20de%20origen%20Norte%20del%20Cauca."
+       class="floating-btn floating-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+      <svg width="30" height="30" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.699c.969.54 1.771.82 2.791.82 3.182 0 5.768-2.587 5.768-5.766.001-3.181-2.584-5.766-5.768-5.766zm9.969 5.766c0 5.503-4.477 9.98-9.97 9.98-1.748 0-3.383-.454-4.81-1.248l-5.22 1.366 1.39-5.084c-.886-1.503-1.39-3.255-1.39-5.014 0-5.503 4.477-9.98 9.97-9.98 5.493 0 9.97 4.477 9.97 9.98z"/>
+      </svg>
+    </a>
+  </div>
+
+  <!-- DRAWER DEL CARRITO DE COMPRAS -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Carrito de compras">
+    <div class="cart-header">
+      <div class="cart-header-title">
+        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
+        </svg>
+        <h3>Tu Carrito de Cafe</h3>
+      </div>
+      <button class="cart-close-btn" id="cartCloseBtn" aria-label="Cerrar carrito">&times;</button>
+    </div>
+
+    <!-- Items list or empty state -->
+    <div class="cart-body" id="cartBody">
+      <!-- Generado dinamicamente por app.js -->
+    </div>
+
+    <div class="cart-footer" id="cartFooter">
+      <div class="cart-summary-row">
+        <span>Subtotal estimado:</span>
+        <span class="cart-total-amount" id="cartTotalAmount">$0 COP</span>
+      </div>
+      <p class="cart-shipping-notice">
+        ☕ Cafe 100% de origen Norte del Cauca • Envios directos en Cali y Norte del Cauca
+      </p>
+      <div class="cart-actions-group">
+        <button class="btn btn-primary btn-checkout" id="cartCheckoutBtn">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.699c.969.54 1.771.82 2.791.82 3.182 0 5.768-2.587 5.768-5.766.001-3.181-2.584-5.766-5.768-5.766zm9.969 5.766c0 5.503-4.477 9.98-9.97 9.98-1.748 0-3.383-.454-4.81-1.248l-5.22 1.366 1.39-5.084c-.886-1.503-1.39-3.255-1.39-5.014 0-5.503 4.477-9.98 9.97-9.98 5.493 0 9.97 4.477 9.97 9.98z"/>
+          </svg>
+          <span>Finalizar Pedido por WhatsApp</span>
+        </button>
+        <button class="cart-clear-btn" id="cartClearBtn">Vaciar carrito</button>
+      </div>
+    </div>
+  </aside>
+
+  <script src="local-mock.js"></script>
+  <script src="auth.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

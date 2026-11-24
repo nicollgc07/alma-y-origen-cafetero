@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel Administrador | Alma & Origen</title>
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="auth.css">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body class="admin-body">
+
+  <!-- SIDEBAR -->
+  <aside class="admin-sidebar" id="adminSidebar">
+    <div class="admin-sidebar-logo">
+      <img src="assets/images/logo-original.png" alt="Logo" style="width:48px; height:48px; object-fit:contain;">
+      <div>
+        <div style="font-family:'Cinzel',serif; color:#C5A059; font-size:0.9rem; font-weight:700;">Alma &amp; Origen</div>
+        <div style="font-size:0.7rem; color:#7a6a5a;">Panel Administrador</div>
+      </div>
+    </div>
+    <nav class="admin-nav">
+      <a href="#" class="admin-nav-item active" data-panel="dashboard" onclick="showPanel('dashboard',this)">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+        Dashboard
+      </a>
+      <a href="#" class="admin-nav-item" data-panel="clientes" onclick="showPanel('clientes',this)">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        Clientes
+      </a>
+      <a href="#" class="admin-nav-item" data-panel="pedidos" onclick="showPanel('pedidos',this)">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+        Pedidos
+      </a>
+      <a href="#" class="admin-nav-item" data-panel="contenido" onclick="showPanel('contenido',this)">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+        Editar Contenido
+      </a>
+      <a href="#" class="admin-nav-item" data-panel="medios" onclick="showPanel('medios',this)">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+        Imágenes / Videos
+      </a>
+      <div class="admin-nav-separator"></div>
+      <a href="index.html" class="admin-nav-item">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+        Ver Sitio Web
+      </a>
+      <button class="admin-nav-item admin-logout" onclick="cerrarSesionAdmin()">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"/></svg>
+        Cerrar Sesión
+      </button>
+    </nav>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="admin-main">
+
+    <!-- TOPBAR -->
+    <div class="admin-topbar">
+      <div>
+        <h1 class="admin-page-title" id="adminPageTitle">Dashboard</h1>
+        <p class="admin-page-sub" id="adminPageSub">Resumen general del sitio y el negocio</p>
+      </div>
+      <div class="admin-topbar-user">
+        <div class="admin-avatar" id="adminAvatarLetter">A</div>
+        <span id="adminUserName">Administrador</span>
+      </div>
+    </div>
+
+    <!-- ═══ PANEL: DASHBOARD ═══════════════════════════════════════════ -->
+    <section class="admin-panel active" id="panel-dashboard">
+      <div class="admin-stats-grid">
+        <div class="admin-stat-card">
+          <div class="admin-stat-icon" style="background:#1e3a2f;">
+            <svg width="22" height="22" fill="none" stroke="#2ecc71" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          </div>
+          <div>
+            <div class="admin-stat-num" id="statClientes">-</div>
+            <div class="admin-stat-label">Clientes registrados</div>
+          </div>
+        </div>
+        <div class="admin-stat-card">
+          <div class="admin-stat-icon" style="background:#2a1e0f;">
+            <svg width="22" height="22" fill="none" stroke="#C5A059" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+          </div>
+          <div>
+            <div class="admin-stat-num" id="statPedidos">-</div>
+            <div class="admin-stat-label">Pedidos totales</div>
+          </div>
+        </div>
+        <div class="admin-stat-card">
+          <div class="admin-stat-icon" style="background:#1a1f2e;">
+            <svg width="22" height="22" fill="none" stroke="#5b8dee" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <div>
+            <div class="admin-stat-num" id="statVentas">-</div>
+            <div class="admin-stat-label">Ventas totales (COP)</div>
+          </div>
+        </div>
+        <div class="admin-stat-card">
+          <div class="admin-stat-icon" style="background:#2a0f1e;">
+            <svg width="22" height="22" fill="none" stroke="#e74c8b" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+          </div>
+          <div>
+            <div class="admin-stat-num" id="statPendientes">-</div>
+            <div class="admin-stat-label">Pedidos pendientes</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Últimos pedidos rápidos -->
+      <div class="admin-card" style="margin-top:28px;">
+        <div class="admin-card-header">
+          <h3>Últimos Pedidos</h3>
+          <button class="admin-btn-sm" onclick="showPanel('pedidos', document.querySelector('[data-panel=pedidos]'))">Ver todos</button>
+        </div>
+        <div id="dashRecentOrders" class="admin-table-wrap">
+          <div class="admin-loading">Cargando pedidos...</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ PANEL: CLIENTES ══════════════════════════════════════════════ -->
+    <section class="admin-panel" id="panel-clientes">
+      <div class="admin-card">
+        <div class="admin-card-header">
+          <h3>Clientes Registrados</h3>
+          <input type="text" class="admin-search" id="clienteSearch" placeholder="🔍 Buscar cliente..." oninput="filtrarClientes()">
+        </div>
+        <div id="clientesTable" class="admin-table-wrap">
+          <div class="admin-loading">Cargando clientes...</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ PANEL: PEDIDOS ═══════════════════════════════════════════════ -->
+    <section class="admin-panel" id="panel-pedidos">
+      <div class="admin-card">
+        <div class="admin-card-header">
+          <h3>Todos los Pedidos</h3>
+          <select class="admin-search" id="pedidoFiltroEstado" onchange="cargarPedidos()">
+            <option value="">Todos los estados</option>
+            <option value="pendiente">Pendiente</option>
+            <option value="confirmado">Confirmado</option>
+            <option value="enviado">Enviado</option>
+            <option value="entregado">Entregado</option>
+            <option value="cancelado">Cancelado</option>
+          </select>
+        </div>
+        <div id="pedidosTable" class="admin-table-wrap">
+          <div class="admin-loading">Cargando pedidos...</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ PANEL: EDITAR CONTENIDO ══════════════════════════════════════ -->
+    <section class="admin-panel" id="panel-contenido">
+      <div class="admin-grid-2">
+
+        <!-- Editor de textos del sitio -->
+        <div class="admin-card">
+          <div class="admin-card-header"><h3>✏️ Textos del Sitio</h3></div>
+          <form id="contenidoForm" class="admin-form">
+            <label>Título Hero (Inicio)</label>
+            <input type="text" id="heroTitle" class="admin-input" placeholder="El Alma del Norte del Cauca...">
+            <label>Descripción Hero</label>
+            <textarea id="heroDesc" class="admin-input" rows="3" placeholder="Formulación y comercialización..."></textarea>
+            <label>Título Sección Origen</label>
+            <input type="text" id="origenTitle" class="admin-input" placeholder="Cafe con Raices...">
+            <label>Texto Sección Origen</label>
+            <textarea id="origenDesc" class="admin-input" rows="3" placeholder="El Norte del Cauca es reconocido..."></textarea>
+            <div class="admin-form-actions">
+              <button type="button" class="admin-btn" onclick="guardarContenido()">💾 Guardar Cambios</button>
+              <span class="admin-save-status" id="contenidoStatus"></span>
+            </div>
+          </form>
+        </div>
+
+        <!-- Vista previa de cambios -->
+        <div class="admin-card">
+          <div class="admin-card-header"><h3>👁️ Vista Previa</h3></div>
+          <div class="admin-preview-box">
+            <div class="admin-preview-tag">Hero Principal</div>
+            <h2 class="admin-preview-title" id="prevHeroTitle">El Alma del Norte del Cauca en Cada Taza</h2>
+            <p class="admin-preview-desc" id="prevHeroDesc">Formulación y comercialización de café de origen de altura con identidad territorial.</p>
+            <div class="admin-preview-tag" style="margin-top:16px;">Sección Origen</div>
+            <h3 class="admin-preview-title" id="prevOrigenTitle" style="font-size:1rem;">Cafe con Raices, Dignidad y Trazabilidad</h3>
+            <p class="admin-preview-desc" id="prevOrigenDesc">El Norte del Cauca es reconocido internacionalmente por sus cafes de notas dulces...</p>
+          </div>
+          <p style="color:#7a6a5a; font-size:0.78rem; margin-top:12px;">Los cambios se aplican en tiempo real al sitio web después de guardar.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ PANEL: IMÁGENES Y VIDEOS ═════════════════════════════════════ -->
+    <section class="admin-panel" id="panel-medios">
+      <div class="admin-grid-2">
+
+        <!-- Subir imagen -->
+        <div class="admin-card">
+          <div class="admin-card-header"><h3>🖼️ Subir Imagen</h3></div>
+          <form id="uploadImgForm" class="admin-form">
+            <label>Sección donde aparece</label>
+            <select id="imgSeccion" class="admin-input">
+              <option value="hero">Hero principal (Inicio)</option>
+              <option value="origen">Sección Origen</option>
+              <option value="galeria">Galería Audiovisual</option>
+              <option value="producto">Imagen de producto</option>
+            </select>
+            <label>Seleccionar imagen</label>
+            <div class="admin-upload-zone" id="imgDropZone" onclick="document.getElementById('imgFile').click()">
+              <svg width="32" height="32" fill="none" stroke="#C5A059" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+              <span>Haz clic o arrastra tu imagen aquí</span>
+              <small>JPG, PNG, WEBP — máx. 5 MB</small>
+              <input type="file" id="imgFile" accept="image/*" style="display:none" onchange="previewImg(this)">
+            </div>
+            <div id="imgPreview" style="display:none; margin:12px 0;">
+              <img id="imgPreviewSrc" src="" alt="Preview" style="width:100%; border-radius:8px; border:1px solid rgba(197,160,89,0.3);">
+            </div>
+            <div class="admin-form-actions">
+              <button type="button" class="admin-btn" onclick="subirImagen()">☁️ Subir al sitio</button>
+              <span class="admin-save-status" id="imgStatus"></span>
+            </div>
+          </form>
+        </div>
+
+        <!-- Subir video -->
+        <div class="admin-card">
+          <div class="admin-card-header"><h3>🎬 Subir Video</h3></div>
+          <form id="uploadVidForm" class="admin-form">
+            <label>Título del video</label>
+            <input type="text" id="vidTitulo" class="admin-input" placeholder="Ej: Cosecha selectiva 2026">
+            <label>Descripción</label>
+            <textarea id="vidDesc" class="admin-input" rows="2" placeholder="Breve descripción del video..."></textarea>
+            <label>Seleccionar video</label>
+            <div class="admin-upload-zone" id="vidDropZone" onclick="document.getElementById('vidFile').click()">
+              <svg width="32" height="32" fill="none" stroke="#C5A059" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10l4.553-2.069A1 1 0 0121 8.869v6.262a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+              <span>Haz clic o arrastra tu video aquí</span>
+              <small>MP4, MOV, WEBM — máx. 100 MB</small>
+              <input type="file" id="vidFile" accept="video/*" style="display:none" onchange="previewVid(this)">
+            </div>
+            <div id="vidPreview" style="display:none; margin:12px 0;">
+              <video id="vidPreviewSrc" controls style="width:100%; border-radius:8px; border:1px solid rgba(197,160,89,0.3);"></video>
+            </div>
+            <div class="admin-form-actions">
+              <button type="button" class="admin-btn" onclick="subirVideo()">☁️ Subir al sitio</button>
+              <span class="admin-save-status" id="vidStatus"></span>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Galería de medios existentes -->
+      <div class="admin-card" style="margin-top:24px;">
+        <div class="admin-card-header"><h3>📂 Medios existentes en el sitio</h3></div>
+        <div id="mediosGaleria" class="admin-media-grid">
+          <div class="admin-loading">Cargando medios...</div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- MODAL DETALLE PEDIDO -->
+  <div class="admin-modal-overlay" id="modalOverlay" style="display:none;" onclick="cerrarModal()">
+    <div class="admin-modal" onclick="event.stopPropagation()">
+      <button class="admin-modal-close" onclick="cerrarModal()">✕</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <!-- Firebase SDK -->
+  <!-- Mock local (sin Firebase) -->
+  <script src="local-mock.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>
+
